@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>课程达标评价系统</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+		<div id="app">
+			<table>
+				<thead>
+					<tr>
+						<th colspan="2">课程目标</th>
+						<th colspan="2">达成度评价考核形式</th>
+						<th colspan="2">课程目标1</th>
+						<th colspan="2">课程目标2</th>
+						<th colspan="2">课程目标3</th>
+						<th colspan="2">课程目标4</th>
+					</tr>
+					<tr>
+						<th rowspan="2" colspan="2">支撑材料</th>
+						<th>平时成绩</th>
+						<th>期末成绩</th>
+						<th rowspan="2">平时成绩</th>
+						<th rowspan="2">期末考试<br />相关试题</th>
+						<th rowspan="2">平时成绩</th>
+						<th rowspan="2">期末考试<br />相关试题</th>
+						<th rowspan="2">平时成绩</th>
+						<th rowspan="2">期末考试<br />相关试题</th>
+						<th rowspan="2">平时成绩</th>
+						<th rowspan="2">期末考试<br />相关试题</th>
+					</tr>
+					<tr>
+						<th>30%</th>
+						<th>70%</th>
+					</tr>
+					<tr>
+						<th>学号</th>
+						<th>姓名/满分</th>
+						<th>100</th>
+						<th>100</th>
+						<th>30</th>
+						<th>30</th>
+						<th>35</th>
+						<th>25</th>
+						<th>20</th>
+						<th>20</th>
+						<th>15</th>
+						<th>25</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-for="(stu, index) in students">
+						<td>{{students[index]['学号']}}</td>
+						<td>{{students[index]['姓名']}}</td>
+						<td><input :value="students[index]['总平时成绩']" type="text" class="num"></td>
+						<td><input :value="students[index]['总期末成绩']" type="text" class="num"></td>
+						<td><input :value="students[index]['平时成绩1']" type="text" class="num"></td>
+						<td><input :value="students[index]['期末成绩1']" type="text" class="num"></td>
+						<td><input :value="students[index]['平时成绩2']" type="text" class="num"></td>
+						<td><input :value="students[index]['期末成绩2']" type="text" class="num"></td>
+						<td><input :value="students[index]['平时成绩3']" type="text" class="num"></td>
+						<td><input :value="students[index]['期末成绩3']" type="text" class="num"></td>
+						<td><input :value="students[index]['平时成绩4']" type="text" class="num"></td>
+						<td><input :value="students[index]['期末成绩4']" type="text" class="num"></td>
+					</tr>
+				</tbody>
+			</table>
+			<input type="file" id="excel-file">
+			<div id="main" style="width: 600px;height:400px;"></div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+		<script src="https://cdn.bootcss.com/xlsx/0.11.5/xlsx.core.min.js"></script>
+		<script src="js/echarts.min.js"></script>
+		<script src="./js/app.js"></script>
+	</body>
+</html>
