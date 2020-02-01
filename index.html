@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>课程达标评价系统</title>
+		<link rel="stylesheet" href="css/buttons.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 	</head>
 	<body>
@@ -53,21 +54,32 @@
 					<tr v-for="(stu, index) in students">
 						<td>{{students[index]['学号']}}</td>
 						<td>{{students[index]['姓名']}}</td>
-						<td><input :value="students[index]['总平时成绩']" type="text" class="num"></td>
-						<td><input :value="students[index]['总期末成绩']" type="text" class="num"></td>
-						<td><input :value="students[index]['平时成绩1']" type="text" class="num"></td>
-						<td><input :value="students[index]['期末成绩1']" type="text" class="num"></td>
-						<td><input :value="students[index]['平时成绩2']" type="text" class="num"></td>
-						<td><input :value="students[index]['期末成绩2']" type="text" class="num"></td>
-						<td><input :value="students[index]['平时成绩3']" type="text" class="num"></td>
-						<td><input :value="students[index]['期末成绩3']" type="text" class="num"></td>
-						<td><input :value="students[index]['平时成绩4']" type="text" class="num"></td>
-						<td><input :value="students[index]['期末成绩4']" type="text" class="num"></td>
+						<td>{{students[index]['总平时成绩']}}</td>
+						<td>{{students[index]['总期末成绩']}}</td>
+						<td>{{students[index]['平时成绩1']}}</td>
+						<td>{{students[index]['期末成绩1']}}</td>
+						<td>{{students[index]['平时成绩2']}}</td>
+						<td>{{students[index]['期末成绩2']}}</td>
+						<td>{{students[index]['平时成绩3']}}</td>
+						<td>{{students[index]['期末成绩3']}}</td>
+						<td>{{students[index]['平时成绩4']}}</td>
+						<td>{{students[index]['期末成绩4']}}</td>
 					</tr>
 				</tbody>
 			</table>
-			<input type="file" id="excel-file">
-			<div id="main" style="width: 600px;height:400px;"></div>
+			<label for="import-file" id="import-button" class="button button-3d button-action button-pill">导入数据</label>
+			<input type="file" id="import-file">
+			<div id="course0" style="width: 800px;height:600px;"></div>
+			<div id="course00" style="width: 800px;height:600px;"></div>
+			<div id="course1" style="width: 800px;height:600px;"></div>
+			<div id="course11" style="width: 800px;height:600px;"></div>
+			<div id="course2" style="width: 800px;height:600px;"></div>
+			<div id="course22" style="width: 800px;height:600px;"></div>
+			<div id="course3" style="width: 800px;height:600px;"></div>
+			<div id="course33" style="width: 800px;height:600px;"></div>
+			<div id="course4" style="width: 800px;height:600px;"></div>
+			<div id="course44" style="width: 800px;height:600px;"></div>
+			<div id="course_result" style="width: 800px;height:600px;"></div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
